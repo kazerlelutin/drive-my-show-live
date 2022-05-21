@@ -1,0 +1,45 @@
+{
+  "name": "drive-my-show-live",
+  "version": "0.0.1",
+  "description": "live server for Drive My Show",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazerlelutin/drive-my-show-live.git"
+  },
+  "keywords": [
+    "show",
+    "conductor",
+    "podcast"
+  ],
+  "author": {
+    "email": "b@bouteiller.contact",
+    "url": "https://ko-fi.com/kazerlelutin",
+    "name": "Kazerlelutin"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kazerlelutin/drive-my-show-live/issues"
+  },
+  "homepage": "https://github.com/kazerlelutin/drive-my-show-live#readme",
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.3.0",
+    "@koa/router": "^10.1.1",
+    "axios": "^0.27.2",
+    "cron": "^2.0.0",
+    "dotenv": "^16.0.1",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "lodash": "^4.17.21",
+    "socket.io": "^4.5.1"
+  }
+}
