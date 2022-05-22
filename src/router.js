@@ -1,11 +1,12 @@
 const 
-  home = require("./home/broadcast"),
-  broadcast = require("./home/broadcast"),
   Router = require("@koa/router"),
-
-  router = new Router();
+  router = new Router(),
+  broadcast = require("./broadcast/broadcast"),
+  home = require("./home/home"),
+  refreshConductor = require("./refreshConductor/refreshConductor");
 
 router.get("/", home);
-router.post('/broadcast',broadcast)
+router.post("/broadcast", broadcast);
+router.post("/refreshConductor", refreshConductor);
 
 module.exports = router;
