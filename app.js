@@ -14,7 +14,8 @@ const
       methods: ["GET", "POST"],
     },
   }
-  io = require("socket.io")(httpServer,ioSettings);
+  io = require("socket.io")(httpServer,ioSettings),
+  deleteShowCron = require("./src/cron/deleteShow.cron")
   
 app
   .use(koaBody())
@@ -27,5 +28,8 @@ app
   .use(router.allowedMethods());
 
 //TODO cron taskes launch
+
+/**------  CRON  ---------- */
+deleteShowCron.start()
 
 httpServer.listen(5000);
